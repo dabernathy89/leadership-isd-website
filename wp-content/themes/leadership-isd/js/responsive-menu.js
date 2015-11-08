@@ -4,11 +4,11 @@
 
 	'use strict';
 
-	var workstation              = {},
+	var leadership_isd              = {},
 		mainMenuButtonClass = 'menu-toggle',
 		subMenuButtonClass  = 'sub-menu-toggle';
 
-	workstation.init = function() {
+	leadership_isd.init = function() {
 		var toggleButtons = {
 			menu : $( '<button />', {
 				'class' : mainMenuButtonClass,
@@ -16,7 +16,7 @@
 				'aria-pressed' : false,
 				'role' : 'button'
 				} )
-				.append( workstation.params.mainMenu ),
+				.append( leadership_isd.params.mainMenu ),
 			submenu : $( '<button />', {
 				'class' : subMenuButtonClass,
 				'aria-expanded' : false,
@@ -25,15 +25,15 @@
 				} )
 				.append( $( '<span />', {
 					'class' : 'screen-reader-text',
-					text : workstation.params.subMenu
+					text : leadership_isd.params.subMenu
 				} ) )
 		};
 		$( '.nav-primary' ).before( toggleButtons.menu ); // add the main nav buttons
 		$( 'nav .sub-menu' ).before( toggleButtons.submenu ); // add the submenu nav buttons
 		$( '.' + mainMenuButtonClass ).each( _addClassID );
-		$( window ).on( 'resize.workstation', _doResize ).triggerHandler( 'resize.workstation' );
-		$( '.' + mainMenuButtonClass ).on( 'click.workstation-mainbutton', _mainmenuToggle );
-		$( '.' + subMenuButtonClass ).on( 'click.workstation-subbutton', _submenuToggle );
+		$( window ).on( 'resize.leadership_isd', _doResize ).triggerHandler( 'resize.leadership_isd' );
+		$( '.' + mainMenuButtonClass ).on( 'click.leadership-isd-mainbutton', _mainmenuToggle );
+		$( '.' + subMenuButtonClass ).on( 'click.leadership-isd-subbutton', _submenuToggle );
 	};
 
 	// add nav class and ID to related button
@@ -47,7 +47,7 @@
 		}
 		$this.attr( 'id', 'mobile-' + $( nav ).attr( id ) );
 	}
-	
+
 	// check CSS rule to determine width
 	function _combineMenus(){
 		if ($( '.js nav' ).css( 'position' ) == 'relative' ){ // depends on .js nav having position: relative; in style.css
@@ -177,11 +177,11 @@
 
 		// run test on resize of the window
 		$( window ).resize( _combineMenus );
-		
-		workstation.params = typeof WorkstationL10n === 'undefined' ? '' : WorkstationL10n;
 
-		if ( typeof workstation.params !== 'undefined' ) {
-			workstation.init();
+		leadership_isd.params = typeof LeadershipISDL10n === 'undefined' ? '' : LeadershipISDL10n;
+
+		if ( typeof leadership_isd.params !== 'undefined' ) {
+			leadership_isd.init();
 		}
 
 	});
