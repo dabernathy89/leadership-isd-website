@@ -75,7 +75,7 @@ unregister_sidebar( 'sidebar-alt' );
 unregister_sidebar( 'header-right' );
 
 //* Rename Primary Menu
-add_theme_support ( 'genesis-menus' , array ( 'primary' => 'Header Navigation Menu', 'secondary' => 'Before Header Navigation Menu' ) );
+add_theme_support ( 'genesis-menus' , array ( 'primary' => 'Header Navigation Menu', 'secondary' => 'Secondary Navigation Menu' ) );
 
 //* Remove output of primary navigation right extras
 remove_filter( 'genesis_nav_items', 'genesis_nav_right', 10, 2 );
@@ -83,9 +83,9 @@ remove_filter( 'wp_nav_menu_items', 'genesis_nav_right', 10, 2 );
 
 //* Reposition the navigation
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
+add_action( 'genesis_before_header', 'genesis_do_nav' );
 remove_action( 'genesis_after_header', 'genesis_do_subnav' );
-add_action( 'genesis_before_header', 'genesis_do_subnav' );
-add_action( 'genesis_header', 'genesis_do_nav', 5 );
+add_action( 'genesis_header', 'genesis_do_subnav', 5 );
 
 
 //* Remove skip link for primary navigation and add skip link for footer widgets

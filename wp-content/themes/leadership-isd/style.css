@@ -318,8 +318,8 @@ input[type="search"] {
 .entry:before,
 .entry-content:before,
 .footer-widgets:before,
-.nav-primary:before,
 .nav-secondary:before,
+.nav-primary:before,
 .pagination:before,
 .site-container:before,
 .site-footer:before,
@@ -337,8 +337,8 @@ input[type="search"] {
 .entry:after,
 .entry-content:after,
 .footer-widgets:after,
-.nav-primary:after,
 .nav-secondary:after,
+.nav-primary:after,
 .pagination:after,
 .site-container:after,
 .site-footer:after,
@@ -1452,7 +1452,7 @@ img.alignright,
 /* ## Widget Area
 --------------------------------------------- */
 /* line 1104, sass/_workstation_pro.scss */
-.site-header .nav-primary {
+.site-header .nav-secondary {
   float: right;
   text-align: right;
   width: 840px;
@@ -1629,40 +1629,40 @@ img.alignright,
 /* ## Primary Navigation
 --------------------------------------------- */
 /* line 1263, sass/_workstation_pro.scss */
-.nav-primary .genesis-nav-menu li li {
+.nav-secondary .genesis-nav-menu li li {
   margin-left: 0;
 }
 
 /* ## Secondary Navigation
 --------------------------------------------- */
 /* line 1270, sass/_workstation_pro.scss */
-.nav-secondary {
+.nav-primary {
   background-color: #222;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
 /* line 1275, sass/_workstation_pro.scss */
-.nav-secondary .genesis-nav-menu a {
+.nav-primary .genesis-nav-menu a {
   color: #ccc;
   text-decoration: none;
 }
 
 /* line 1280, sass/_workstation_pro.scss */
-.nav-secondary .genesis-nav-menu a:focus,
-.nav-secondary .genesis-nav-menu a:hover,
-.nav-secondary .genesis-nav-menu .current-menu-item > a {
+.nav-primary .genesis-nav-menu a:focus,
+.nav-primary .genesis-nav-menu a:hover,
+.nav-primary .genesis-nav-menu .current-menu-item > a {
   color: #fff;
 }
 
 /* line 1286, sass/_workstation_pro.scss */
-.nav-secondary .genesis-nav-menu .sub-menu a {
+.nav-primary .genesis-nav-menu .sub-menu a {
   color: #222;
 }
 
 /* line 1290, sass/_workstation_pro.scss */
-.nav-secondary .genesis-nav-menu .sub-menu a:focus,
-.nav-secondary .genesis-nav-menu .sub-menu a:hover,
-.nav-secondary .genesis-nav-menu .sub-menu .current-menu-item > a {
+.nav-primary .genesis-nav-menu .sub-menu a:focus,
+.nav-primary .genesis-nav-menu .sub-menu a:hover,
+.nav-primary .genesis-nav-menu .sub-menu .current-menu-item > a {
   color: #ff4800;
 }
 
@@ -1700,9 +1700,9 @@ img.alignright,
 }
 
 /* line 1328, sass/_workstation_pro.scss */
-.add-color .nav-primary .genesis-nav-menu > li > a:focus,
-.add-color .nav-primary .genesis-nav-menu > li > a:hover,
-.add-color .nav-primary .sub-menu {
+.add-color .nav-secondary .genesis-nav-menu > li > a:focus,
+.add-color .nav-secondary .genesis-nav-menu > li > a:hover,
+.add-color .nav-secondary .sub-menu {
   border-color: #222;
 }
 
@@ -2099,7 +2099,7 @@ p.entry-meta {
 
   /* line 1687, sass/_workstation_pro.scss */
   .content,
-  .site-header .nav-primary {
+  .site-header .nav-secondary {
     width: 780px;
   }
 }
@@ -2112,7 +2112,7 @@ p.entry-meta {
 
   /* line 1701, sass/_workstation_pro.scss */
   .content,
-  .site-header .nav-primary {
+  .site-header .nav-secondary {
     width: 600px;
   }
 
@@ -2137,7 +2137,7 @@ p.entry-meta {
   }
 
   /* line 1726, sass/_workstation_pro.scss */
-  .site-header .nav-primary {
+  .site-header .nav-secondary {
     width: 500px;
   }
 }
@@ -2168,7 +2168,7 @@ p.entry-meta {
   }
 
   /* line 1757, sass/_workstation_pro.scss */
-  .site-header .nav-primary,
+  .site-header .nav-secondary,
   .title-area {
     width: 100%;
   }
@@ -2180,7 +2180,7 @@ p.entry-meta {
   }
 
   /* line 1767, sass/_workstation_pro.scss */
-  .site-header .nav-primary {
+  .site-header .nav-secondary {
     float: none;
     text-align: center;
     padding-bottom: 20px;
@@ -2366,7 +2366,7 @@ p.entry-meta {
   .js nav .genesis-nav-menu .menu-item .sub-menu li a:hover,
   .js nav button:hover,
   .js .menu-toggle:hover,
-  .js .nav-primary {
+  .js .nav-secondary {
     background-color: #222;
     color: #fff;
   }

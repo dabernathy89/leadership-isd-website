@@ -83,8 +83,8 @@ input[type="search"] {
 .entry:before,
 .entry-content:before,
 .footer-widgets:before,
-.nav-primary:before,
 .nav-secondary:before,
+.nav-primary:before,
 .pagination:before,
 .site-container:before,
 .site-footer:before,
@@ -101,8 +101,8 @@ input[type="search"] {
 .entry:after,
 .entry-content:after,
 .footer-widgets:after,
-.nav-primary:after,
 .nav-secondary:after,
+.nav-primary:after,
 .pagination:after,
 .site-container:after,
 .site-footer:after,
@@ -1101,7 +1101,7 @@ img.alignright,
 /* ## Widget Area
 --------------------------------------------- */
 
-.site-header .nav-primary {
+.site-header .nav-secondary {
     float: right;
     text-align: right;
     width: 840px;
@@ -1260,36 +1260,36 @@ img.alignright,
 /* ## Primary Navigation
 --------------------------------------------- */
 
-.nav-primary .genesis-nav-menu li li {
+.nav-secondary .genesis-nav-menu li li {
     margin-left: 0;
 }
 
 /* ## Secondary Navigation
 --------------------------------------------- */
 
-.nav-secondary {
+.nav-primary {
     background-color: #222;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-.nav-secondary .genesis-nav-menu a {
+.nav-primary .genesis-nav-menu a {
     color: #ccc;
     text-decoration: none;
 }
 
-.nav-secondary .genesis-nav-menu a:focus,
-.nav-secondary .genesis-nav-menu a:hover,
-.nav-secondary .genesis-nav-menu .current-menu-item > a {
+.nav-primary .genesis-nav-menu a:focus,
+.nav-primary .genesis-nav-menu a:hover,
+.nav-primary .genesis-nav-menu .current-menu-item > a {
     color: #fff;
 }
 
-.nav-secondary .genesis-nav-menu .sub-menu a {
+.nav-primary .genesis-nav-menu .sub-menu a {
     color: #222;
 }
 
-.nav-secondary .genesis-nav-menu .sub-menu a:focus,
-.nav-secondary .genesis-nav-menu .sub-menu a:hover,
-.nav-secondary .genesis-nav-menu .sub-menu .current-menu-item > a {
+.nav-primary .genesis-nav-menu .sub-menu a:focus,
+.nav-primary .genesis-nav-menu .sub-menu a:hover,
+.nav-primary .genesis-nav-menu .sub-menu .current-menu-item > a {
     color: #ff4800;
 }
 
@@ -1325,9 +1325,9 @@ img.alignright,
     color: #222;
 }
 
-.add-color .nav-primary .genesis-nav-menu > li > a:focus,
-.add-color .nav-primary .genesis-nav-menu > li > a:hover,
-.add-color .nav-primary .sub-menu {
+.add-color .nav-secondary .genesis-nav-menu > li > a:focus,
+.add-color .nav-secondary .genesis-nav-menu > li > a:hover,
+.add-color .nav-secondary .sub-menu {
     border-color: #222;
 }
 
@@ -1685,7 +1685,7 @@ p.entry-meta {
     }
 
     .content,
-    .site-header .nav-primary {
+    .site-header .nav-secondary {
         width: 780px;
     }
 
@@ -1699,7 +1699,7 @@ p.entry-meta {
     }
 
     .content,
-    .site-header .nav-primary {
+    .site-header .nav-secondary {
         width: 600px;
     }
 
@@ -1723,7 +1723,7 @@ p.entry-meta {
         width: 100%;
     }
 
-    .site-header .nav-primary {
+    .site-header .nav-secondary {
         width: 500px;
     }
 
@@ -1754,7 +1754,7 @@ p.entry-meta {
         width: 100%;
     }
 
-    .site-header .nav-primary,
+    .site-header .nav-secondary,
     .title-area {
         width: 100%;
     }
@@ -1764,7 +1764,7 @@ p.entry-meta {
         padding: 16px;
     }
 
-    .site-header .nav-primary {
+    .site-header .nav-secondary {
         float: none;
         text-align: center;
         padding-bottom: 20px;
@@ -1925,7 +1925,7 @@ p.entry-meta {
     .js nav .genesis-nav-menu .menu-item .sub-menu li a:hover,
     .js nav button:hover,
     .js .menu-toggle:hover,
-    .js .nav-primary {
+    .js .nav-secondary {
         background-color: #222;
         color: #fff;
     }
