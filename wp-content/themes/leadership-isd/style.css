@@ -2428,3 +2428,42 @@ p.entry-meta {
     margin-bottom: 4px;
   }
 }
+/* line 1, sass/_general.scss */
+a {
+  color: #F26522;
+}
+
+/* line 5, sass/_general.scss */
+.button {
+  font-size: 15px;
+  letter-spacing: 4px;
+}
+
+/* line 1, sass/_header.scss */
+section.logo {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 3px solid #F26522;
+}
+/* line 6, sass/_header.scss */
+section.logo img {
+  max-width: 400px;
+}
+
+/* line 11, sass/_header.scss */
+.genesis-nav-menu {
+  text-align: center;
+}
+/* line 14, sass/_header.scss */
+.genesis-nav-menu .menu-item {
+  float: none;
+  text-transform: uppercase;
+}
+/* line 20, sass/_header.scss */
+.genesis-nav-menu > .current-menu-item > a {
+  border-bottom: 2px solid #F26522;
+}
+/* line 27, sass/_header.scss */
+.genesis-nav-menu > li > a.focus, .genesis-nav-menu > li > a:hover {
+  border-bottom: 2px solid #F26522;
+}

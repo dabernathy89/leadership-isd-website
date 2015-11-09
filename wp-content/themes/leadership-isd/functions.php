@@ -87,6 +87,10 @@ add_action( 'genesis_before_header', 'genesis_do_nav' );
 remove_action( 'genesis_after_header', 'genesis_do_subnav' );
 add_action( 'genesis_header', 'genesis_do_subnav', 5 );
 
+add_action( 'genesis_before_header', 'leadership_isd_header_logo', 5 );
+function leadership_isd_header_logo() {
+	include_once( get_stylesheet_directory() . '/templates/header-logo.php' );
+}
 
 //* Remove skip link for primary navigation and add skip link for footer widgets
 add_filter( 'genesis_skip_links_output', 'leadership_isd_skip_links_output' );
@@ -131,16 +135,14 @@ function leadership_isd_featured_photo() {
 //* Add Excerpt support to Pages
 add_post_type_support( 'page', 'excerpt' );
 
+// Remove default header content
+remove_action( 'genesis_header', 'genesis_header_markup_open', 5 );
+remove_action( 'genesis_header', 'genesis_do_header' );
+remove_action( 'genesis_header', 'genesis_header_markup_close', 15 );
+
 //* Output Excerpt on Pages
 add_action( 'genesis_meta', 'leadership_isd_page_description_meta' );
 function leadership_isd_page_description_meta() {
-
-	if ( is_front_page() ) {
-		remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
-		add_action( 'genesis_after_header', 'leadership_isd_open_after_header', 5 );
-		add_action( 'genesis_after_header', 'genesis_seo_site_description', 10 );
-		add_action( 'genesis_after_header', 'leadership_isd_close_after_header', 15 );
-	}
 
 	if ( is_archive() && ! is_post_type_archive() ) {
 		remove_action( 'genesis_before_loop', 'genesis_do_taxonomy_title_description', 15 );

@@ -16,4 +16,13 @@ License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
+$lisd_darkblue: #11182B;
+$lisd_orange: #F26522;
+$lisd_body_text: rgba( $lisd_darkblue, .65 );
+$lisd_dark_bg_body_text: rgba( white, .65 );
+
 @import "workstation_pro";
+
+@import "general";
+
+@import "header";

@@ -1,0 +1,32 @@
+section.logo {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 3px solid $lisd_orange;
+
+    img {
+        max-width: 400px;
+    }
+}
+
+.genesis-nav-menu {
+    text-align: center;
+
+    .menu-item {
+        float: none;
+        text-transform: uppercase;
+    }
+
+    > .current-menu-item {
+        > a {
+            border-bottom: 2px solid $lisd_orange;
+        }
+    }
+
+    > li {
+        > a {
+            &.focus, &:hover {
+                border-bottom: 2px solid $lisd_orange;
+            }
+        }
+    }
+}
