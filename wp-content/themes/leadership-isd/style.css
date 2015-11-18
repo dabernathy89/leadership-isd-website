@@ -2450,10 +2450,28 @@ section.logo img {
   text-transform: uppercase;
 }
 /* line 21, sass/_header.scss */
+.genesis-nav-menu .menu-item-has-children > a:after {
+  content: "\f347";
+  display: inline-block;
+  font: normal 16px/1 'dashicons';
+  text-rendering: auto;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  line-height: 20px;
+  padding-left: 4px;
+  vertical-align: middle;
+  opacity: 0.5;
+}
+/* line 36, sass/_header.scss */
+.genesis-nav-menu .menu-item-has-children .menu-item-has-children > a:after {
+  content: "\f345";
+}
+/* line 43, sass/_header.scss */
 .genesis-nav-menu > .current-menu-item > a {
   border-bottom: 2px solid #F26522;
 }
-/* line 28, sass/_header.scss */
+/* line 50, sass/_header.scss */
 .genesis-nav-menu > li > a.focus, .genesis-nav-menu > li > a:hover {
   border-bottom: 2px solid #F26522;
 }

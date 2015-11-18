@@ -17,6 +17,28 @@ section.logo {
         text-transform: uppercase;
     }
 
+    .menu-item-has-children {
+        > a:after {
+            content: "\f347";
+            display: inline-block;
+            font: normal 16px/1 'dashicons';
+            text-rendering: auto;
+            -webkit-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+            line-height: 20px;
+            padding-left: 4px;
+            vertical-align: middle;
+            opacity: 0.5;
+        }
+
+        .menu-item-has-children {
+            > a:after {
+                content: "\f345";
+            }
+        }
+    }
+
     > .current-menu-item {
         > a {
             border-bottom: 2px solid $lisd_orange;
