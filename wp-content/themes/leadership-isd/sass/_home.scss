@@ -1,0 +1,175 @@
+.front-page .content > section {
+    .title {
+        text-transform: uppercase;
+    }
+}
+
+.front-page-1 {
+    color: #FFFFFF;
+    position: relative;
+    border: none;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        border-top: 3px solid rgba(white,0.25);
+    }
+
+    .wrap {
+        position: relative;
+        z-index: 10;
+        padding: 100px 0;
+
+        > .inner {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .button {
+            margin-right: 15px;
+        }
+    }
+}
+
+.front-page-2 {
+    background-color: #FFFFFF;
+    text-align: center;
+
+    .wrap {
+        padding: 40px 0;
+
+        > .inner {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    }
+
+    .fellows {
+        article {
+            display: inline-block;
+            margin: 0 5px 15px;
+
+            .name {
+                margin: 0;
+
+                a {
+                    text-decoration: none;
+                    color: rgb(50,50,50);
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .meta {
+                color: rgb(150,150,150);
+            }
+
+            img {
+                width: 200px;
+            }
+        }
+    }
+}
+
+.front-page-3 {
+    color: #FFFFFF;
+    text-align: center;
+    background-position: top center;
+    min-height: 0;
+
+    a.button {
+        background-color: $lisd_orange;
+    }
+
+    .wrap {
+        padding: 40px 0;
+    }
+}
+
+.front-page-4 {
+    text-align: center;
+
+    .wrap {
+        padding: 40px 0;
+    }
+
+    .inner {
+        margin-bottom: 40px;
+    }
+
+    .post {
+        text-align: left;
+        margin-bottom: 20px;
+        padding: 0 20px;
+
+        img {
+            width: 200px;
+            float: left;
+            margin-right: 15px;
+        }
+
+        h4 {
+            margin-top: 0;
+
+            a {
+                color: #222222;
+                text-decoration: none;
+            }
+        }
+
+        time {
+            font-size: 14px;
+            color: rgb(150,150,150);
+            vertical-align: top;
+            text-transform: uppercase;
+        }
+
+        .entry {
+            margin: 0;
+            padding: 0;
+        }
+
+        @media (max-width: 767px) {
+            text-align: center;
+
+            img {
+                width: auto;
+                margin: 0 auto;
+                max-width: 90%;
+                float: none;
+            }
+
+            .entry {
+                clear: left;
+            }
+        }
+    }
+}
+
+.front-page-5 {
+    background-color: #11182B;
+    color: #FFFFFF;
+    text-align: center;
+    border-top: 3px solid $lisd_orange;
+    border-bottom: 3px solid $lisd_orange;
+
+    .wrap {
+        padding: 40px 0;
+    }
+
+    .inner {
+        margin-bottom: 20px;
+    }
+
+    .one-half {
+        text-align: left;
+    }
+}

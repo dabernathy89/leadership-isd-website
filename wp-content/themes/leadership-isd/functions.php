@@ -245,26 +245,6 @@ function leadership_isd_footer_widgets() {
 
 //* Register widget areas
 genesis_register_sidebar( array(
-	'id'          => 'front-page-1',
-	'name'        => 'Front Page 1',
-	'description' => 'This is the front page 1 section.',
-) );
-genesis_register_sidebar( array(
-	'id'          => 'front-page-2',
-	'name'        => 'Front Page 2',
-	'description' => 'This is the front page 2 section.',
-) );
-genesis_register_sidebar( array(
-	'id'          => 'front-page-3',
-	'name'        => 'Front Page 3',
-	'description' => 'This is the front page 3 section.',
-) );
-genesis_register_sidebar( array(
-	'id'          => 'front-page-4',
-	'name'        => 'Front Page 4',
-	'description' => 'This is the front page 4 section.',
-) );
-genesis_register_sidebar( array(
 	'id'          => 'flex-footer',
 	'name'        => 'Flexible Footer',
 	'description' => 'This is the footer section.',
