@@ -14,8 +14,6 @@ function leadership_isd_css() {
 
 	$handle  = defined( 'CHILD_THEME_NAME' ) && CHILD_THEME_NAME ? sanitize_title_with_dashes( CHILD_THEME_NAME ) : 'child-theme';
 
-	$color = get_theme_mod( 'leadership_isd_accent_color', leadership_isd_customizer_get_default_accent_color() );
-
 	$opts = apply_filters( 'leadership_isd_images', array( '1', '2' ) );
 
 	$settings = array();
@@ -35,69 +33,6 @@ function leadership_isd_css() {
 		}
 
 	}
-
-	$css .= ( leadership_isd_customizer_get_default_accent_color() !== $color ) ? sprintf( '
-		a,
-		.add-black .after-header a:focus,
-		.add-black .after-header a:hover,
-		.author-box-title,
-		.archive-pagination li a:focus,
-		.archive-pagination li a:hover,
-		.archive-pagination .active a,
-		.archive-title,
-		.entry-header .entry-meta,
-		.entry-title a:focus,
-		.entry-title a:hover,
-		.featured-content .entry-meta,
-		.flexible-widgets .featured-content .has-post-thumbnail .alignnone + .entry-header .entry-title a:focus,
-		.flexible-widgets .featured-content .has-post-thumbnail .alignnone + .entry-header .entry-title a:hover,
-		.footer-widgets a:focus,
-		.footer-widgets a:hover,
-		.front-page-3 a:focus,
-		.front-page-3 a:hover,
-		.genesis-nav-menu .sub-menu a:focus,
-		.genesis-nav-menu .sub-menu a:hover,
-		.nav-secondary .genesis-nav-menu .sub-menu a:focus,
-		.nav-secondary .genesis-nav-menu .sub-menu a:hover,
-		.nav-secondary .genesis-nav-menu .sub-menu .current-menu-item > a,
-		.page-title,
-		.site-footer a:focus,
-		.site-footer a:hover,
-		.widget li a:focus,
-		.widget li a:hover,
-		.widget-title {
-			color: %1$s;
-		}
-
-		button,
-		input[type="button"],
-		input[type="reset"],
-		input[type="submit"],
-		.add-color .after-header,
-		.add-color .site-header,
-		.button,
-		.widget .button {
-			background-color: %1$s;
-		}
-
-		.after-header,
-		.front-page-1,
-		.genesis-nav-menu .sub-menu,
-		.genesis-nav-menu > .current-menu-item > a,
-		.genesis-nav-menu > li > a:focus,
-		.genesis-nav-menu > li > a:hover {
-			border-color: %1$s;
-		}
-
-		@media only screen and (max-width: 880px) {
-			.js nav .genesis-nav-menu .menu-item .sub-menu li a:focus,
-			.js nav .genesis-nav-menu .menu-item a:focus,
-			.js nav button:focus,
-			.js .menu-toggle:focus {
-				color: %1$s;
-			}
-		}
-		', $color ) : '';
 
 	if( $css ){
 		wp_add_inline_style( $handle, $css );

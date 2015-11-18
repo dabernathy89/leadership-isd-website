@@ -9,19 +9,6 @@
  * @license GPL2-0+
  */
 
-/**
- * Get default accent color for Customizer.
- *
- * Abstracted here since at least two functions use it.
- *
- * @since 1.0.0
- *
- * @return string Hex color code for accent color.
- */
-function leadership_isd_customizer_get_default_accent_color() {
-	return '#ff4800';
-}
-
 add_action( 'customize_register', 'leadership_isd_customizer_register' );
 /**
  * Register settings and controls with the Customizer.
@@ -57,26 +44,5 @@ function leadership_isd_customizer_register() {
 		) ) );
 
 	}
-
-	$wp_customize->add_setting(
-		'leadership_isd_accent_color',
-		array(
-			'default' => leadership_isd_customizer_get_default_accent_color(),
-			'sanitize_callback' => 'sanitize_hex_color',
-		)
-	);
-
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-			$wp_customize,
-			'leadership_isd_accent_color',
-			array(
-				'description' => 'Change the default accent color for links, buttons, and more.',
-			    'label'       => 'Accent Color',
-			    'section'     => 'colors',
-			    'settings'    => 'leadership_isd_accent_color',
-			)
-		)
-	);
 
 }
