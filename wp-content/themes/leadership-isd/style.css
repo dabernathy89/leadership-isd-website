@@ -2436,20 +2436,26 @@ section.logo {
 }
 /* line 6, sass/_header.scss */
 section.logo img {
-  max-width: 400px;
+  max-width: 90%;
+}
+@media (min-width: 480px) {
+  /* line 11, sass/_header.scss */
+  section.logo img {
+    max-width: 400px;
+  }
 }
 
-/* line 11, sass/_header.scss */
+/* line 17, sass/_header.scss */
 .genesis-nav-menu {
   text-align: center;
   background-color: #11182B;
 }
-/* line 15, sass/_header.scss */
+/* line 21, sass/_header.scss */
 .genesis-nav-menu .menu-item {
   float: none;
   text-transform: uppercase;
 }
-/* line 21, sass/_header.scss */
+/* line 27, sass/_header.scss */
 .genesis-nav-menu .menu-item-has-children > a:after {
   content: "\f347";
   display: inline-block;
@@ -2463,15 +2469,15 @@ section.logo img {
   vertical-align: middle;
   opacity: 0.5;
 }
-/* line 36, sass/_header.scss */
+/* line 42, sass/_header.scss */
 .genesis-nav-menu .menu-item-has-children .menu-item-has-children > a:after {
   content: "\f345";
 }
-/* line 43, sass/_header.scss */
+/* line 49, sass/_header.scss */
 .genesis-nav-menu > .current-menu-item > a {
   border-bottom: 2px solid #F26522;
 }
-/* line 50, sass/_header.scss */
+/* line 56, sass/_header.scss */
 .genesis-nav-menu > li > a.focus, .genesis-nav-menu > li > a:hover {
   border-bottom: 2px solid #F26522;
 }
