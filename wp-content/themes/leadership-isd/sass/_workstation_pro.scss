@@ -69,6 +69,8 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 --------------------------------------------- */
 
 *,
+:before,
+:after,
 input[type="search"] {
     -webkit-box-sizing: border-box;
     -moz-box-sizing:    border-box;
@@ -1604,44 +1606,6 @@ p.entry-meta {
 .sidebar {
     font-size: 16px;
     font-size: 1.6rem;
-}
-
-
-/* # Footer Widgets
----------------------------------------------------------------------------------------------------- */
-
-.footer-widgets {
-    background-color: #222;
-    clear: both;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 16px;
-    font-size: 1.6rem;
-    font-weight: 300;
-}
-
-.footer-widgets,
-.footer-widgets a,
-.footer-widgets a.button {
-    color: #fff;
-}
-
-.footer-widgets input {
-    border: 1px solid #222;
-}
-
-.footer-widgets a:focus,
-.footer-widgets a:hover {
-    color: #ff4800;
-}
-
-.footer-widgets li {
-    border-bottom: 1px dotted #666;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-}
-
-.footer-widgets p:last-child {
-    margin-bottom: 0;
 }
 
 

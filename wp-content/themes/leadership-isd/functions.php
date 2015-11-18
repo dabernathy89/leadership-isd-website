@@ -140,6 +140,11 @@ remove_action( 'genesis_header', 'genesis_header_markup_open', 5 );
 remove_action( 'genesis_header', 'genesis_do_header' );
 remove_action( 'genesis_header', 'genesis_header_markup_close', 15 );
 
+// Remove default footer content
+remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
+remove_action( 'genesis_footer', 'genesis_do_footer' );
+remove_action( 'genesis_footer', 'genesis_footer_markup_close', 15 );
+
 //* Output Excerpt on Pages
 add_action( 'genesis_meta', 'leadership_isd_page_description_meta' );
 function leadership_isd_page_description_meta() {

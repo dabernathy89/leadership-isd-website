@@ -1,0 +1,41 @@
+.footer-widgets {
+
+    .flexible-widgets {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .widget-title {
+        margin-bottom: 10px;
+    }
+
+    .gform_wrapper {
+        .gfield {
+            margin-bottom: 10px;
+
+            > label {
+                position: absolute;
+                left: -10000px;
+                top: -10000px;
+                visibility: hidden;
+            }
+        }
+
+        .gform_footer {
+            margin: 0;
+            padding: 0;
+
+            input[type="submit"] {
+                margin: 0;
+                padding: 12px 0;
+                width: 97.5%;
+            }
+        }
+    }
+
+    .fa {
+        font-size: 24px;
+        margin-right: 10px;
+        display: inline-block;
+    }
+}
