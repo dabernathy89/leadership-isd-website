@@ -1,5 +1,9 @@
 ( function ( document, $, undefined ) {
 
+	$('.menu-item-has-children > a').on('click', function(event) {
+		event.preventDefault();
+	});
+
 	$( 'body' ).addClass( 'js' );
 
 	'use strict';
