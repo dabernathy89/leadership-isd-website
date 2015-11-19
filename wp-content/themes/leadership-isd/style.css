@@ -2764,30 +2764,31 @@ section.logo img {
   padding: 0;
   padding: 40px 0 0;
   margin: 0 auto 40px;
+  clear: both;
 }
-/* line 42, sass/_impact_stories.scss */
+/* line 43, sass/_impact_stories.scss */
 .category-impact-stories .featured-image-wrap.first {
   padding-right: 15px;
 }
-/* line 46, sass/_impact_stories.scss */
+/* line 47, sass/_impact_stories.scss */
 .category-impact-stories .featured-image-wrap img {
   width: 100%;
 }
-/* line 51, sass/_impact_stories.scss */
+/* line 52, sass/_impact_stories.scss */
 .category-impact-stories .entry {
   margin: 0;
   padding: 0;
 }
-/* line 55, sass/_impact_stories.scss */
+/* line 56, sass/_impact_stories.scss */
 .category-impact-stories .entry p {
   margin-bottom: 10px;
   line-height: 1.4;
 }
-/* line 61, sass/_impact_stories.scss */
+/* line 62, sass/_impact_stories.scss */
 .category-impact-stories .pull-right + div {
   clear: none;
 }
-/* line 65, sass/_impact_stories.scss */
+/* line 66, sass/_impact_stories.scss */
 .category-impact-stories .pagination-wrap {
   max-width: 800px;
   margin: 0 auto;
