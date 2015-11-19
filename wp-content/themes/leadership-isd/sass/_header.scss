@@ -27,24 +27,27 @@ section.logo {
         text-transform: uppercase;
     }
 
-    .menu-item-has-children {
-        > a:after {
-            content: "\f347";
-            display: inline-block;
-            font: normal 16px/1 'dashicons';
-            text-rendering: auto;
-            -webkit-transform: translate(0, 0);
-            -ms-transform: translate(0, 0);
-            transform: translate(0, 0);
-            line-height: 20px;
-            padding-left: 4px;
-            vertical-align: middle;
-            opacity: 0.5;
-        }
+    @media (min-width: 881px) {
 
         .menu-item-has-children {
             > a:after {
-                content: "\f345";
+                content: "\f347";
+                display: inline-block;
+                font: normal 16px/1 'dashicons';
+                text-rendering: auto;
+                -webkit-transform: translate(0, 0);
+                -ms-transform: translate(0, 0);
+                transform: translate(0, 0);
+                line-height: 20px;
+                padding-left: 4px;
+                vertical-align: middle;
+                opacity: 0.5;
+            }
+
+            .menu-item-has-children {
+                > a:after {
+                    content: "\f345";
+                }
             }
         }
     }
@@ -60,6 +63,31 @@ section.logo {
             &.focus, &:hover {
                 border-bottom: 2px solid $lisd_orange;
             }
+        }
+    }
+}
+
+@media (max-width: 880px) {
+    .js {
+        nav .genesis-nav-menu .menu-item a,
+        nav .genesis-nav-menu .menu-item a:hover,
+        nav .genesis-nav-menu .menu-item a:focus,
+        nav .genesis-nav-menu .menu-item .sub-menu li a,
+        nav .genesis-nav-menu .menu-item .sub-menu li a:hover,
+        nav button:hover,
+        .menu-toggle,
+        .menu-toggle:hover,
+        .sub-menu-toggle,
+        .nav-secondary {
+            background-color: $lisd_darkblue;
+        }
+    }
+
+    .genesis-nav-menu > .menu-item > .sub-menu {
+        padding-left: 20px;
+
+        > .menu-item > .sub-menu {
+            padding-left: 20px;
         }
     }
 }

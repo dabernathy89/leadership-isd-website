@@ -1037,12 +1037,6 @@ img.alignright,
     list-style: none;
 }
 
-/* Display outline on focus */
-:focus {
-    color: #222;
-    outline: #ccc solid 1px;
-}
-
 /* # Site Header
 ---------------------------------------------------------------------------------------------------- */
 
@@ -1862,10 +1856,6 @@ p.entry-meta {
     .js .genesis-nav-menu .menu-item > a:focus ul.sub-menu .sub-menu {
         left: 0;
         margin-left: 0;
-    }
-
-    .js .genesis-nav-menu > .menu-item-has-children > a:after {
-        content: none;
     }
 
     .js .genesis-nav-menu .sub-menu {
