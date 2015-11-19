@@ -1,0 +1,17 @@
+.pagination {
+    li {
+        a {
+            color: #FFFFFF;
+            background-color: $lisd_darkblue;
+            padding: 8px 18px;
+            border-radius: 3px;
+        }
+
+        &.active {
+            a {
+                color: #FFFFFF;
+                background-color: $lisd_orange;
+            }
+        }
+    }
+}

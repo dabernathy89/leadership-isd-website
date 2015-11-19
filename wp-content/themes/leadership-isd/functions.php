@@ -258,3 +258,19 @@ genesis_register_sidebar( array(
 	'name'        => 'Flexible Footer',
 	'description' => 'This is the footer section.',
 ) );
+
+function impact_stories_excerpt_length( $length ) {
+	if (is_category('impact-stories')) {
+		$length = 30;
+	}
+	return $length;
+}
+add_filter( 'excerpt_length', 'impact_stories_excerpt_length', 999 );
+
+function imapct_stories_excerpt_read_more( $more ) {
+	if (is_category('impact-stories')) {
+		$more = '...';
+	}
+	return $more;
+}
+add_filter('excerpt_more', 'imapct_stories_excerpt_read_more');

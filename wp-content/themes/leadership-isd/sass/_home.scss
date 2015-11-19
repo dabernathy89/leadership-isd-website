@@ -1,6 +1,12 @@
-.front-page .content > section {
-    .title {
-        text-transform: uppercase;
+.front-page {
+    .content > section {
+        .title {
+            text-transform: uppercase;
+        }
+    }
+
+    .after-header {
+        border-bottom: 1px solid $lisd_orange;
     }
 }
 

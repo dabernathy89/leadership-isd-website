@@ -1,0 +1,69 @@
+.category-impact-stories {
+    .archive-description {
+        color: #FFFFFF;
+        text-align: center;
+
+        h1 {
+            color: #FFFFFF;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        p {
+            margin: 0 auto;
+            font-size: 1.8rem;
+        }
+    }
+
+    article.post {
+        max-width: 800px;
+        margin: 0 auto;
+
+        &:last-child {
+            > hr {
+                display: none;
+            }
+        }
+
+        .title {
+            margin-bottom: 10px;
+        }
+
+        hr {
+            max-width: 80%;
+            border-bottom: 1px solid $lisd_orange;
+            padding: 0;
+            padding: 40px 0 0;
+            margin: 0 auto 40px;
+        }
+    }
+
+    .featured-image-wrap {
+        &.first {
+            padding-right: 15px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .entry {
+        margin: 0;
+        padding: 0;
+
+        p {
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+    }
+
+    .pull-right + div {
+        clear: none;
+    }
+
+    .pagination-wrap {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
