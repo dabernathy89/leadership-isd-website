@@ -32,6 +32,10 @@ section.logo {
     .menu-item {
         float: none;
         text-transform: uppercase;
+
+        @media (min-width: 881px) and (max-width: 1199px) {
+            margin: 0 12px;
+        }
     }
 
     @media (min-width: 881px) {
