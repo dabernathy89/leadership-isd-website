@@ -18,7 +18,6 @@
     <?php endif; ?>
             <h3 class="title"><?php the_title(); ?></h3>
             <div class="excerpt"><?php the_excerpt(); ?></div>
-            <a class="button read-more" href="<?php the_permalink(); ?>">Read More</a>
 
     </div><!-- entry -->
 

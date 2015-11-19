@@ -130,7 +130,7 @@ function leadership_isd_featured_photo() {
 	if ( is_attachment() || ! genesis_get_option( 'content_archive_thumbnail' ) )
 		return;
 
-	if ( is_singular() && $image = genesis_get_image( array( 'format' => 'url', 'size' => genesis_get_option( 'image_size' ) ) ) ) {
+	if ( is_singular() && !is_singular('partners') && !is_singular('members') && $image = genesis_get_image( array( 'format' => 'url', 'size' => genesis_get_option( 'image_size' ) ) ) ) {
 		printf( '<div class="featured-image"><img src="%s" alt="%s" class="entry-image"/></div>', $image, the_title_attribute( 'echo=0' ) );
 	}
 
@@ -186,6 +186,25 @@ function leadership_isd_page_description_meta() {
 		add_action( 'genesis_after_header', 'leadership_isd_open_after_header', 5 );
 		add_action( 'genesis_after_header', 'leadership_isd_add_page_description', 10 );
 		add_action( 'genesis_after_header', 'leadership_isd_close_after_header', 15 );
+	}
+
+	if ( is_post_type_archive(array('members','partners'))) {
+		remove_action( 'genesis_after_header', 'leadership_isd_open_after_header', 5 );
+		remove_action( 'genesis_after_header', 'genesis_do_cpt_archive_title_description', 10 );
+		remove_action( 'genesis_after_header', 'leadership_isd_close_after_header', 15 );
+		remove_action( 'genesis_entry_header', 'genesis_post_info', 8 );
+	}
+
+	if (is_singular('partners') || is_singular('members')) {
+		remove_action( 'genesis_entry_header', 'genesis_post_info', 8 );
+	}
+
+	if (is_singular('partners')) {
+		add_action( 'genesis_entry_footer', 'genesis_post_meta', 10 );
+	}
+
+	if (is_singular('members')) {
+		add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 	}
 
 }
@@ -267,10 +286,8 @@ function impact_stories_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'impact_stories_excerpt_length', 999 );
 
-function imapct_stories_excerpt_read_more( $more ) {
-	if (is_category('impact-stories')) {
-		$more = '...';
-	}
-	return $more;
+function lisd_excerpt_read_more( $more ) {
+	global $post;
+	return '...<br><a class="button read-more" href="' . get_permalink( $post->ID ) . '">Read More</a>';
 }
-add_filter('excerpt_more', 'imapct_stories_excerpt_read_more');
+add_filter('excerpt_more', 'lisd_excerpt_read_more');

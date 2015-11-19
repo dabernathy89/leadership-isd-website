@@ -16,6 +16,13 @@ section.logo {
 
 .after-header {
     border: none;
+    margin-bottom: 0;
+    padding: 40px 0 20px;
+    text-align: center;
+
+    .archive-title, .page-title {
+        color: #222;
+    }
 }
 
 .genesis-nav-menu {
@@ -28,6 +35,15 @@ section.logo {
     }
 
     @media (min-width: 881px) {
+
+        > .menu-item-has-children {
+            > a:after {
+                position: absolute;
+                top: 50%;
+                right: -20px;
+                margin-top: -10px;
+            }
+        }
 
         .menu-item-has-children {
             position: relative;
@@ -43,10 +59,6 @@ section.logo {
                 line-height: 20px;
                 vertical-align: middle;
                 opacity: 0.5;
-                position: absolute;
-                top: 50%;
-                right: -20px;
-                margin-top: -10px;
             }
 
             .menu-item-has-children {

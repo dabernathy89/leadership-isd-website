@@ -1,0 +1,47 @@
+.blog, .archive {
+    .entry-meta {
+        margin-bottom: 10px;
+    }
+
+    .entry-title {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        .entry-image {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+.post-type-archive-partners {
+    .entry {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .entry-footer {
+        .entry-meta {
+            margin: 40px 0;
+        }
+    }
+
+    .archive-description {
+        text-align: center;
+
+        .archive-title {
+            color: #222;
+        }
+    }
+
+    .content {
+        width: auto;
+        float: none;
+
+        .partner-container {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
