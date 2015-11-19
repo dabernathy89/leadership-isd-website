@@ -2421,6 +2421,20 @@ a {
   float: right;
 }
 
+/* line 41, sass/_general.scss */
+hr {
+  border-bottom: 1px solid #F26522;
+  padding: 0;
+  padding: 40px 0 0;
+  margin: 0 auto 40px;
+  clear: both;
+}
+
+/* line 49, sass/_general.scss */
+.entry-footer .entry-meta {
+  border-top: 1px solid #F26522;
+}
+
 /* line 1, sass/_header.scss */
 section.logo {
   text-align: center;
@@ -2454,7 +2468,11 @@ section.logo img {
   text-transform: uppercase;
 }
 @media (min-width: 881px) {
-  /* line 33, sass/_header.scss */
+  /* line 32, sass/_header.scss */
+  .genesis-nav-menu .menu-item-has-children {
+    position: relative;
+  }
+  /* line 35, sass/_header.scss */
   .genesis-nav-menu .menu-item-has-children > a:after {
     content: "\f347";
     display: inline-block;
@@ -2464,26 +2482,29 @@ section.logo img {
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
     line-height: 20px;
-    padding-left: 4px;
     vertical-align: middle;
     opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    right: -20px;
+    margin-top: -10px;
   }
-  /* line 48, sass/_header.scss */
+  /* line 53, sass/_header.scss */
   .genesis-nav-menu .menu-item-has-children .menu-item-has-children > a:after {
     content: "\f345";
   }
 }
-/* line 56, sass/_header.scss */
+/* line 61, sass/_header.scss */
 .genesis-nav-menu > .current-menu-item > a {
   border-bottom: 2px solid #F26522;
 }
-/* line 63, sass/_header.scss */
+/* line 68, sass/_header.scss */
 .genesis-nav-menu > li > a.focus, .genesis-nav-menu > li > a:hover {
   border-bottom: 2px solid #F26522;
 }
 
 @media (max-width: 880px) {
-  /* line 72, sass/_header.scss */
+  /* line 77, sass/_header.scss */
   .js nav .genesis-nav-menu .menu-item a,
   .js nav .genesis-nav-menu .menu-item a:hover,
   .js nav .genesis-nav-menu .menu-item a:focus,
@@ -2497,11 +2518,11 @@ section.logo img {
     background-color: #11182B;
   }
 
-  /* line 86, sass/_header.scss */
+  /* line 91, sass/_header.scss */
   .genesis-nav-menu > .menu-item > .sub-menu {
     padding-left: 20px;
   }
-  /* line 89, sass/_header.scss */
+  /* line 94, sass/_header.scss */
   .genesis-nav-menu > .menu-item > .sub-menu > .menu-item > .sub-menu {
     padding-left: 20px;
   }
@@ -2760,35 +2781,30 @@ section.logo img {
 /* line 32, sass/_impact_stories.scss */
 .category-impact-stories article.post hr {
   max-width: 80%;
-  border-bottom: 1px solid #F26522;
-  padding: 0;
-  padding: 40px 0 0;
-  margin: 0 auto 40px;
-  clear: both;
 }
-/* line 43, sass/_impact_stories.scss */
+/* line 38, sass/_impact_stories.scss */
 .category-impact-stories .featured-image-wrap.first {
   padding-right: 15px;
 }
-/* line 47, sass/_impact_stories.scss */
+/* line 42, sass/_impact_stories.scss */
 .category-impact-stories .featured-image-wrap img {
   width: 100%;
 }
-/* line 52, sass/_impact_stories.scss */
+/* line 47, sass/_impact_stories.scss */
 .category-impact-stories .entry {
   margin: 0;
   padding: 0;
 }
-/* line 56, sass/_impact_stories.scss */
+/* line 51, sass/_impact_stories.scss */
 .category-impact-stories .entry p {
   margin-bottom: 10px;
   line-height: 1.4;
 }
-/* line 62, sass/_impact_stories.scss */
+/* line 57, sass/_impact_stories.scss */
 .category-impact-stories .pull-right + div {
   clear: none;
 }
-/* line 66, sass/_impact_stories.scss */
+/* line 61, sass/_impact_stories.scss */
 .category-impact-stories .pagination-wrap {
   max-width: 800px;
   margin: 0 auto;
@@ -2805,4 +2821,9 @@ section.logo img {
 .pagination li.active a {
   color: #FFFFFF;
   background-color: #F26522;
+}
+/* line 18, sass/_pagination.scss */
+.pagination .pagination-omission {
+  vertical-align: bottom;
+  margin: 0 10px;
 }

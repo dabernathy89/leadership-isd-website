@@ -30,6 +30,8 @@ section.logo {
     @media (min-width: 881px) {
 
         .menu-item-has-children {
+            position: relative;
+
             > a:after {
                 content: "\f347";
                 display: inline-block;
@@ -39,9 +41,12 @@ section.logo {
                 -ms-transform: translate(0, 0);
                 transform: translate(0, 0);
                 line-height: 20px;
-                padding-left: 4px;
                 vertical-align: middle;
                 opacity: 0.5;
+                position: absolute;
+                top: 50%;
+                right: -20px;
+                margin-top: -10px;
             }
 
             .menu-item-has-children {
