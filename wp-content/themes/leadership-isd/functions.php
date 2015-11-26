@@ -20,7 +20,7 @@ define( 'CHILD_THEME_VERSION', '1.0.0' );
 add_action( 'wp_enqueue_scripts', 'leadership_isd_enqueue_scripts_styles' );
 function leadership_isd_enqueue_scripts_styles() {
 
-	$version = "20151118";
+	$version = "20151119";
 
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300italic,700italic,700,300', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
@@ -291,3 +291,13 @@ function lisd_excerpt_read_more( $more ) {
 	return '...<br><a class="button read-more" href="' . get_permalink( $post->ID ) . '">Read More</a>';
 }
 add_filter('excerpt_more', 'lisd_excerpt_read_more');
+
+function lisd_exclude_impact_stories_from_main_blog( $query ) {
+    if ( $query->is_home() && $query->is_main_query() ) {
+    	$cat_id = get_category_by_slug('impact-stories');
+    	if ($cat_id !== false) {
+	        $query->set( 'category__not_in', $cat_id );
+	    }
+    }
+}
+add_action( 'pre_get_posts', 'lisd_exclude_impact_stories_from_main_blog' );
