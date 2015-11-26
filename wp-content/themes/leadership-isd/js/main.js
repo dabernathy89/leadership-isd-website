@@ -11,4 +11,8 @@ jQuery(document).ready(function($) {
         }
     });
 
+    if ($('#be-event-calendar').length) {
+        $('#be-event-calendar').fullCalendar('option', 'height', 'auto');
+    }
+
 });

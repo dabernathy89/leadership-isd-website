@@ -278,6 +278,12 @@ genesis_register_sidebar( array(
 	'description' => 'This is the footer section.',
 ) );
 
+genesis_register_sidebar( array(
+	'id'          => 'events-sidebar',
+	'name'        => 'Events Sidebar',
+	'description' => 'This is the sidebar for the events/calendar pages.'
+) );
+
 function impact_stories_excerpt_length( $length ) {
 	if (is_category('impact-stories')) {
 		$length = 30;
