@@ -29,7 +29,7 @@
 
             <?php $is_first = ($our_team->current_post % 2 === 0) ? "first" : ""; ?>
 
-            <?php include( get_stylesheet_directory() . '/templates/fellows/grid-item.php' ); ?>
+            <?php include( get_stylesheet_directory() . '/templates/team/grid-item.php' ); ?>
 
         <?php endwhile; ?>
 
