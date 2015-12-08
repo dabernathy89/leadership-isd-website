@@ -307,3 +307,27 @@ function lisd_exclude_impact_stories_from_main_blog( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'lisd_exclude_impact_stories_from_main_blog' );
+
+function lisd_posts_navigation($custom_query = null, $next_text = 'Older posts', $prev_text = 'Newer posts') {
+	$max = is_null($custom_query) ? $GLOBALS['wp_query']->max_num_pages : $custom_query->max_num_pages;
+
+	// Don't print empty markup if there's only one page.
+	if ( $max < 2 ) {
+		return;
+	}
+	?>
+	<nav class="navigation posts-navigation" role="navigation">
+		<ul class="nav-links pager">
+
+			<?php if ( get_next_posts_link('', $max) ) : ?>
+			<li class="previous"><?php next_posts_link($next_text, $max); ?></li>
+			<?php endif; ?>
+
+			<?php if ( get_previous_posts_link() ) : ?>
+			<li class="next"><?php previous_posts_link($prev_text); ?></li>
+			<?php endif; ?>
+
+		</ul><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	<?php
+}

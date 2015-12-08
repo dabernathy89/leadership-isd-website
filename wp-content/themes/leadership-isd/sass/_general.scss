@@ -61,3 +61,25 @@ hr {
 .site-inner {
     // padding-top: 0;
 }
+
+.posts-navigation {
+    a {
+        font-size: 15px;
+        letter-spacing: 4px;
+        border-radius: 3px;
+        background-color: #F26522;
+        border: 2px solid #F26522;
+        padding: 14px 24px;
+        font-weight: bold;
+        color: #FFFFFF;
+        font-family: 'Roboto Condensed', sans-serif;
+        cursor: pointer;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: #cd551c;
+            border: 2px solid #cd551c;
+        }
+    }
+}

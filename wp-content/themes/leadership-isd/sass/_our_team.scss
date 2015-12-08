@@ -1,0 +1,25 @@
+.page-template-our-team {
+    .our-team-grid {
+        .wp-post-image {
+            float: left;
+            margin-right: 10px;
+            width: 150px;
+        }
+
+        > hr {
+            padding-top: 0;
+        }
+
+        > div {
+            margin-bottom: 30px;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .entry {
+        margin-bottom: 0;
+    }
+}

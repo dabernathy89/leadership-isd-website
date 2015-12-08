@@ -2432,6 +2432,27 @@ hr {
   margin-top: 10px;
 }
 
+/* line 66, sass/_general.scss */
+.posts-navigation a {
+  font-size: 15px;
+  letter-spacing: 4px;
+  border-radius: 3px;
+  background-color: #F26522;
+  border: 2px solid #F26522;
+  padding: 14px 24px;
+  font-weight: bold;
+  color: #FFFFFF;
+  font-family: 'Roboto Condensed', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 80, sass/_general.scss */
+.posts-navigation a:hover {
+  background-color: #cd551c;
+  border: 2px solid #cd551c;
+}
+
 /* line 1, sass/_header.scss */
 section.logo {
   text-align: center;
@@ -2885,4 +2906,50 @@ section.logo img {
 .post-type-archive-partners .content .partner-container {
   margin-left: auto;
   margin-right: auto;
+}
+
+/* line 3, sass/_fellows.scss */
+.page-template-fellows .fellows-grid .wp-post-image {
+  float: left;
+  margin-right: 10px;
+  width: 150px;
+}
+/* line 9, sass/_fellows.scss */
+.page-template-fellows .fellows-grid > hr {
+  padding-top: 0;
+}
+/* line 13, sass/_fellows.scss */
+.page-template-fellows .fellows-grid > div {
+  margin-bottom: 30px;
+}
+/* line 17, sass/_fellows.scss */
+.page-template-fellows .fellows-grid p {
+  margin-bottom: 0;
+}
+/* line 22, sass/_fellows.scss */
+.page-template-fellows .entry {
+  margin-bottom: 0;
+}
+
+/* line 3, sass/_our_team.scss */
+.page-template-our-team .our-team-grid .wp-post-image {
+  float: left;
+  margin-right: 10px;
+  width: 150px;
+}
+/* line 9, sass/_our_team.scss */
+.page-template-our-team .our-team-grid > hr {
+  padding-top: 0;
+}
+/* line 13, sass/_our_team.scss */
+.page-template-our-team .our-team-grid > div {
+  margin-bottom: 30px;
+}
+/* line 17, sass/_our_team.scss */
+.page-template-our-team .our-team-grid p {
+  margin-bottom: 0;
+}
+/* line 22, sass/_our_team.scss */
+.page-template-our-team .entry {
+  margin-bottom: 0;
 }
