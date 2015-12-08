@@ -1,9 +1,11 @@
-<header class="entry-header">
-    <h1 class="entry-title" itemprop="headline"><?php the_title(); ?></h1>
-</header>
+<div class="wrap">
+    <header class="entry-header">
+        <h1 class="entry-title" itemprop="headline"><?php the_title(); ?></h1>
+    </header>
 
-<div class="entry-content" itemprop="text">
-    <?php the_content(); ?>
+    <div class="entry-content" itemprop="text">
+        <?php the_content(); ?>
+    </div>
 </div>
 
 <?php

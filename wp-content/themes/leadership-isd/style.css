@@ -2934,7 +2934,7 @@ section.logo img {
 /* line 3, sass/_our_team.scss */
 .page-template-our-team .our-team-grid .wp-post-image {
   float: left;
-  margin-right: 10px;
+  margin-right: 15px;
   width: 150px;
 }
 /* line 9, sass/_our_team.scss */
@@ -2946,10 +2946,18 @@ section.logo img {
   margin-bottom: 30px;
 }
 /* line 17, sass/_our_team.scss */
+.page-template-our-team .our-team-grid h3 {
+  margin-bottom: 5px;
+}
+/* line 21, sass/_our_team.scss */
+.page-template-our-team .our-team-grid .title {
+  margin-bottom: 10px;
+}
+/* line 25, sass/_our_team.scss */
 .page-template-our-team .our-team-grid p {
   margin-bottom: 0;
 }
-/* line 22, sass/_our_team.scss */
+/* line 30, sass/_our_team.scss */
 .page-template-our-team .entry {
   margin-bottom: 0;
 }
