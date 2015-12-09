@@ -40,15 +40,6 @@ section.logo {
 
     @media (min-width: 881px) {
 
-        > .menu-item-has-children {
-            > a:after {
-                position: absolute;
-                top: 50%;
-                right: -20px;
-                margin-top: -10px;
-            }
-        }
-
         .menu-item-has-children {
             position: relative;
 
@@ -69,6 +60,19 @@ section.logo {
                 > a:after {
                     content: "\f345";
                 }
+            }
+        }
+
+        > .menu-item-has-children {
+            > a {
+                padding-right: 10px;
+            }
+
+            > a:after {
+                position: absolute;
+                top: 0;
+                right: -10px;
+                line-height: 60px;
             }
         }
     }

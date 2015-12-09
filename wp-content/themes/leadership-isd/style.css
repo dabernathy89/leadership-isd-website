@@ -2499,18 +2499,11 @@ section.logo img {
   }
 }
 @media (min-width: 881px) {
-  /* line 44, sass/_header.scss */
-  .genesis-nav-menu > .menu-item-has-children > a:after {
-    position: absolute;
-    top: 50%;
-    right: -20px;
-    margin-top: -10px;
-  }
-  /* line 52, sass/_header.scss */
+  /* line 43, sass/_header.scss */
   .genesis-nav-menu .menu-item-has-children {
     position: relative;
   }
-  /* line 55, sass/_header.scss */
+  /* line 46, sass/_header.scss */
   .genesis-nav-menu .menu-item-has-children > a:after {
     content: "\f347";
     display: inline-block;
@@ -2523,22 +2516,33 @@ section.logo img {
     vertical-align: middle;
     opacity: 0.5;
   }
-  /* line 69, sass/_header.scss */
+  /* line 60, sass/_header.scss */
   .genesis-nav-menu .menu-item-has-children .menu-item-has-children > a:after {
     content: "\f345";
   }
+  /* line 67, sass/_header.scss */
+  .genesis-nav-menu > .menu-item-has-children > a {
+    padding-right: 10px;
+  }
+  /* line 71, sass/_header.scss */
+  .genesis-nav-menu > .menu-item-has-children > a:after {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    line-height: 60px;
+  }
 }
-/* line 77, sass/_header.scss */
+/* line 81, sass/_header.scss */
 .genesis-nav-menu > .current-menu-item > a {
   border-bottom: 2px solid #F26522;
 }
-/* line 84, sass/_header.scss */
+/* line 88, sass/_header.scss */
 .genesis-nav-menu > li > a.focus, .genesis-nav-menu > li > a:hover {
   border-bottom: 2px solid #F26522;
 }
 
 @media (max-width: 880px) {
-  /* line 93, sass/_header.scss */
+  /* line 97, sass/_header.scss */
   .js nav .genesis-nav-menu .menu-item a,
   .js nav .genesis-nav-menu .menu-item a:hover,
   .js nav .genesis-nav-menu .menu-item a:focus,
@@ -2552,11 +2556,11 @@ section.logo img {
     background-color: #11182B;
   }
 
-  /* line 107, sass/_header.scss */
+  /* line 111, sass/_header.scss */
   .genesis-nav-menu > .menu-item > .sub-menu {
     padding-left: 20px;
   }
-  /* line 110, sass/_header.scss */
+  /* line 114, sass/_header.scss */
   .genesis-nav-menu > .menu-item > .sub-menu > .menu-item > .sub-menu {
     padding-left: 20px;
   }
