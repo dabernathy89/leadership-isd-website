@@ -20,7 +20,7 @@ define( 'CHILD_THEME_VERSION', '1.0.0' );
 add_action( 'wp_enqueue_scripts', 'leadership_isd_enqueue_scripts_styles' );
 function leadership_isd_enqueue_scripts_styles() {
 
-	$version = "201512092";
+	$version = "201512093";
 
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300italic,700italic,700,300', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
@@ -331,3 +331,64 @@ function lisd_posts_navigation($custom_query = null, $next_text = 'Older posts',
 	</nav><!-- .navigation -->
 	<?php
 }
+
+function lisd_add_impact_pins_endpoint() {
+	add_rewrite_tag( '%get_impact_pins%', '([0-9]+)' );
+    add_rewrite_rule( 'retrieve-impact-pins/?', 'index.php?get_impact_pins=1', 'top' );
+}
+add_action( 'init', 'lisd_add_impact_pins_endpoint' );
+
+function lisd_get_impact_pins() {
+    global $wp_query;
+
+    $item_id = $wp_query->get( 'get_impact_pins' );
+
+    if ( ! empty( $item_id ) && $item_id === "1" ) {
+    	$pins = array(
+    		'type' => 'FeatureCollection',
+    		'features' => array()
+    	);
+
+        $impact_stories = get_posts(array(
+        	'posts_per_page' => -1,
+        	'tax_query' => array(
+        		array(
+        			'taxonomy' => 'category',
+        			'field' => 'slug',
+        			'terms' => 'impact-stories'
+        		)
+        	)
+        ));
+
+        foreach ($impact_stories as $impact_story) {
+        	$lat_lng_string = get_field('impact_story_lat_lng', $impact_story->ID);
+
+        	if ($lat_lng_string) {
+	        	$lat_lng = explode(',', $lat_lng_string);
+	        	$lat_lng[0] = (float)$lat_lng[0];
+	        	$lat_lng[1] = (float)$lat_lng[1];
+	        	$lat_lng = array_reverse($lat_lng);
+	        } else {
+	        	continue;
+	        }
+
+	        $infowindow = "<strong>" . get_the_title( $impact_story->ID ) . "</strong>";
+	        $infowindow .= "<br>";
+	        $infowindow .= '<a href="' . get_permalink($impact_story->ID) . '">Learn more</a>';
+
+        	$pins['features'][] = array(
+        		'type' => 'Feature',
+        		'geometry' => array(
+        			'type' => 'Point',
+        			'coordinates' => $lat_lng
+        		),
+        		'properties' => array(
+        			'title' => $infowindow
+        		)
+        	);
+        }
+
+        wp_send_json( $pins );
+    }
+}
+add_action( 'template_redirect', 'lisd_get_impact_pins' );

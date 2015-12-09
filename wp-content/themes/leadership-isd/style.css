@@ -2851,6 +2851,12 @@ section.logo img {
   max-width: 800px;
   margin: 0 auto;
 }
+/* line 70, sass/_impact_stories.scss */
+.category-impact-stories #map {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 40px;
+}
 
 /* line 3, sass/_pagination.scss */
 .pagination li a {
