@@ -2935,10 +2935,12 @@ section.logo img {
   margin-bottom: 30px;
 }
 
-/* line 3, sass/_our_team.scss */
+/* line 2, sass/_our_team.scss */
+.page-template-our-team .our-team-grid {
+  text-align: center;
+}
+/* line 5, sass/_our_team.scss */
 .page-template-our-team .our-team-grid .wp-post-image {
-  float: left;
-  margin-right: 15px;
   width: 150px;
 }
 /* line 9, sass/_our_team.scss */

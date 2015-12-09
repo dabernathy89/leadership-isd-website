@@ -1,4 +1,4 @@
-<div class="team-member one-half <?php echo $is_first; ?>">
+<div class="team-member one-third <?php echo $is_first; ?>">
     <?php the_post_thumbnail('medium'); ?>
     <div class="entry">
         <h3><?php the_title(); ?></h3>

@@ -29,7 +29,7 @@
     <div class="wrap our-team-grid">
         <?php while ( $our_team->have_posts() ) : $our_team->the_post(); ?>
 
-            <?php $is_first = ($our_team->current_post % 2 === 0) ? "first" : ""; ?>
+            <?php $is_first = ($our_team->current_post % 3 === 0) ? "first" : ""; ?>
 
             <?php include( get_stylesheet_directory() . '/templates/team/grid-item.php' ); ?>
 
