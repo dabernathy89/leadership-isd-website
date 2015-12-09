@@ -2930,6 +2930,10 @@ section.logo img {
 .page-template-fellows .entry {
   margin-bottom: 0;
 }
+/* line 27, sass/_fellows.scss */
+.page-template-fellows .previous-fellows .fellows-class {
+  margin-bottom: 30px;
+}
 
 /* line 3, sass/_our_team.scss */
 .page-template-our-team .our-team-grid .wp-post-image {

@@ -11,6 +11,8 @@ function lisd_fellows_archive_loop() {
 
     include( get_stylesheet_directory() . '/templates/fellows/grid-loop.php' );
 
+    include( get_stylesheet_directory() . '/templates/fellows/previous-fellows.php' );
+
 }
 
 genesis();
