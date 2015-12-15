@@ -5,7 +5,7 @@
         <?php else : ?>
             <div class="featured-image-wrap one-third first">
         <?php endif; ?>
-            <?php the_post_thumbnail( 'large' ); ?>
+            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
         </div><!-- featured-image-wrap -->
     <?php endif; ?>
 
@@ -21,6 +21,6 @@
 
     </div><!-- entry -->
 
-    <hr>
+    <!-- <hr> -->
 
 </article>
