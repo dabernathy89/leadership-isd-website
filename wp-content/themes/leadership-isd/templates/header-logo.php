@@ -1,6 +1,8 @@
 <div class="header">
 	<div class="one-fourth first">
-		&nbsp;
+		<section class="header-left">
+			<?php dynamic_sidebar( 'header-left' ); ?>
+		</section>
 	</div>
 	<div class="one-half">
 		<section class="logo">
@@ -9,7 +11,7 @@
 	</div>
 	<div class="one-fourth">
 		<section class="donate">
-			<a href="/donate" class="button button-small">Donate</a>
+			<?php dynamic_sidebar( 'header-right' ); ?>
 		</section>
 	</div>
 	<div class="clear"></div>
