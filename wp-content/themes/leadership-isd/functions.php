@@ -22,9 +22,11 @@ function leadership_isd_enqueue_scripts_styles() {
 
 	$version = "201512093";
 
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300italic,700italic,700,300', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto+Condensed:300italic,700italic,700,300,400', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
 	wp_enqueue_style( 'dashicons' );
+
+	wp_enqueue_style( 'leadership', get_bloginfo( 'stylesheet_directory' ) . '/sass/style.css' );
 
 	wp_enqueue_script( 'leadership-isd-main-js', get_stylesheet_directory_uri() . '/js/main.js', array( 'jquery' ), $version, true );
 	wp_enqueue_script( 'leadership-isd-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0', true );
@@ -64,7 +66,7 @@ add_theme_support( 'genesis-structural-wraps', array(
 add_theme_support( 'genesis-after-entry-widget-area' );
 
 //* Add new image sizes
-add_image_size( 'featured-content-lg', 1200, 600, TRUE );
+add_image_size( 'featured-content-lg', 1200, 350, TRUE );
 add_image_size( 'featured-content-sm', 600, 400, TRUE );
 
 //* Unregister layout settings

@@ -5,12 +5,18 @@
 
     .entry-title {
         font-size: 3.5rem;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .content {
         .entry-image {
-            margin-bottom: 24px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .entry-content {
+        .button {
+            margin-top: 15px;
         }
     }
 }
