@@ -35,13 +35,13 @@ function sp_post_meta_filter($post_meta) {
 	return $post_meta;
 }
 
-// Remove the default sidebar
-remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
-add_action( 'genesis_sidebar', 'lisd_event_archive_sidebar');
+// // Remove the default sidebar
+// remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
+// add_action( 'genesis_sidebar', 'lisd_event_archive_sidebar');
 
-// Add an event-specific sidebar instead
-function lisd_event_archive_sidebar() {
-    genesis_widget_area( 'events-sidebar' );
-}
+// // Add an event-specific sidebar instead
+// function lisd_event_archive_sidebar() {
+//     genesis_widget_area( 'events-sidebar' );
+// }
 
 genesis();
