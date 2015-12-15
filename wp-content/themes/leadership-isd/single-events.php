@@ -8,7 +8,7 @@ remove_action( 'genesis_entry_header', 'genesis_post_info', 8 );
 
 // Move the post meta to above the post
 remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
-add_action( 'genesis_entry_header', 'genesis_post_meta', 8 );
+add_action( 'genesis_entry_header', 'genesis_post_meta', 10 );
 
 add_filter( 'genesis_post_meta', 'sp_post_meta_filter' );
 function sp_post_meta_filter($post_meta) {

@@ -12,7 +12,7 @@ add_action( 'genesis_entry_content', 'the_excerpt' );
 
 // Move the post meta to above the post
 remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
-add_action( 'genesis_entry_header', 'genesis_post_meta', 8 );
+add_action( 'genesis_entry_header', 'genesis_post_meta', 10 );
 
 /**
  * Replace the post meta information with the time the event is happening
