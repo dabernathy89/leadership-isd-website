@@ -286,6 +286,56 @@ genesis_register_sidebar( array(
 	'description' => 'This is the sidebar for the events/calendar pages.'
 ) );
 
+genesis_register_sidebar( array(
+	'id'          => 'blog',
+	'name'        => 'Blog Sidebar',
+	'description' => 'A sidebar for the blog and for individual posts.',
+) );
+
+/**
+ * Assign the sidebars
+ */
+add_action( 'genesis_header','rb_change_genesis_sidebar' );
+function rb_change_genesis_sidebar() {
+    
+    global $post; 
+
+	//* We want a specific sidebar for posts
+    if ( get_post_type() == 'post' ) {
+        remove_action( 'genesis_sidebar', 'genesis_do_sidebar');
+        remove_action( 'genesis_sidebar', 'gencwooc_ss_do_sidebar' );
+        remove_action( 'genesis_sidebar', 'ss_do_sidebar' );
+        add_action( 'genesis_sidebar', 'rb_output_blog_sidebar' );
+    }
+
+	//* We will remove this sidebar here, but add it back in inside the template for events archive pages
+    if ( get_post_type() == 'events' && is_post_type_archive( 'events' ) ) {
+    	remove_action( 'genesis_sidebar', 'genesis_do_sidebar');
+    	remove_action( 'genesis_sidebar', 'gencwooc_ss_do_sidebar' );
+    	remove_action( 'genesis_sidebar', 'ss_do_sidebar' );
+    	add_action( 'genesis_sidebar', 'rb_output_events_sidebar' );
+    }
+
+	//* We will remove this sidebar here, but add it back in inside the template for eventss archive pages
+    if ( is_singular( 'events' ) ) {
+    	remove_action( 'genesis_sidebar', 'genesis_do_sidebar');
+    	remove_action( 'genesis_sidebar', 'gencwooc_ss_do_sidebar' );
+    	remove_action( 'genesis_sidebar', 'ss_do_sidebar' );
+    	add_action( 'genesis_sidebar', 'rb_output_events_sidebar' );
+    }
+
+}
+//* Output the products sidebar
+function rb_output_blog_sidebar() {
+    dynamic_sidebar( 'blog' );
+}
+
+//* Output the products sidebar
+function rb_output_events_sidebar() {
+    dynamic_sidebar( 'events-sidebar' );
+}
+
+
 function impact_stories_excerpt_length( $length ) {
 	if (is_category('impact-stories')) {
 		$length = 30;
