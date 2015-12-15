@@ -11,4 +11,7 @@ if ( !is_page() ) {
 // Force content-sidebar layout setting
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_content_sidebar' );
 
+// Remove entry meta from entry footer
+remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+
 genesis();
