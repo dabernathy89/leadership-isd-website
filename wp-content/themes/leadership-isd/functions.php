@@ -275,6 +275,18 @@ function leadership_isd_footer_widgets() {
 
 //* Register widget areas
 genesis_register_sidebar( array(
+	'id'          => 'header-left',
+	'name'        => 'Header Left',
+	'description' => '',
+) );
+
+genesis_register_sidebar( array(
+	'id'          => 'header-right',
+	'name'        => 'Header right',
+	'description' => '',
+) );
+
+genesis_register_sidebar( array(
 	'id'          => 'flex-footer',
 	'name'        => 'Flexible Footer',
 	'description' => 'This is the footer section.',
