@@ -21,7 +21,9 @@
 
     article.post {
         // max-width: 800px;
-        margin: 0 auto;
+        margin: 0 auto 50px;
+        border-bottom: 1px solid rgba( $lisd_orange, 0.3 );
+        padding-bottom: 50px;
 
         &:last-child {
             > hr {
@@ -36,6 +38,10 @@
         hr {
             max-width: 80%;
         }
+    }
+
+    article.post:last-child {
+        border-bottom: none;
     }
 
     .featured-image-wrap {

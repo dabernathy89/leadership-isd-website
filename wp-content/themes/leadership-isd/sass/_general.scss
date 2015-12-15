@@ -20,6 +20,10 @@ body {
 
 body.full-width-content {
     background-color: rgba( $lisd_darkblue, 0.05 );
+
+    @media( max-width: 767px ) {
+        background-color: white;
+    }
     
     .content {
         max-width: 960px;
@@ -28,6 +32,10 @@ body.full-width-content {
         float: none;
         background-color: white;
         padding: 30px 40px;
+
+        @media( max-width: 767px ) {
+            padding: 0;
+        }
     }
     
 }
@@ -46,6 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     color: $lisd_orange;
+    text-decoration: none;
 }
 
 .content {
