@@ -1,7 +1,11 @@
+.header {
+    border-top: 3px solid $lisd_orange;
+    background-color: white;
+}
+
 section.logo {
     text-align: center;
     padding: 20px 0;
-    border-top: 3px solid $lisd_orange;
 
     img {
         max-width: 90%;
@@ -12,6 +16,14 @@ section.logo {
             max-width: 400px;
         }
     }
+}
+
+section.donate {
+    @media( min-width: 767px ) {
+        padding: 60px 0 0;
+    }
+
+    text-align: center;
 }
 
 .after-header {
@@ -25,6 +37,10 @@ section.logo {
     }
 }
 
+.nav-primary {
+    clear: both;
+}
+
 .genesis-nav-menu {
     text-align: center;
     background-color: $lisd_darkblue;
@@ -32,6 +48,7 @@ section.logo {
     .menu-item {
         float: none;
         text-transform: uppercase;
+        font-size: 16px;
 
         @media (min-width: 881px) and (max-width: 1199px) {
             margin: 0 12px;
@@ -46,7 +63,7 @@ section.logo {
             > a:after {
                 content: "\f347";
                 display: inline-block;
-                font: normal 16px/1 'dashicons';
+                font: normal 13px/1 'dashicons';
                 text-rendering: auto;
                 -webkit-transform: translate(0, 0);
                 -ms-transform: translate(0, 0);

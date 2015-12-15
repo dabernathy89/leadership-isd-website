@@ -1,6 +1,7 @@
 .blog, .archive {
     .entry-meta {
         margin-bottom: 10px;
+        border: none;
     }
 
     .entry-title {
@@ -18,6 +19,12 @@
         .button {
             margin-top: 15px;
         }
+    }
+
+    .entry-footer {
+        border-bottom: 1px solid rgba( $lisd_orange, 0.3 );
+        padding-bottom: 50px;
+        margin-bottom: 20px;
     }
 }
 
