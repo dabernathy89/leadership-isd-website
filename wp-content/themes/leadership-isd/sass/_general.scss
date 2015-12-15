@@ -1,6 +1,21 @@
 body {
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 16px;
+    > div {
+        font-size: 18px;
+    }
+
+    @media( max-width: 767px ) {
+        > div {
+            font-size: 16px;
+        }
+    }
+}
+
+.inner {
+    @media( max-width: 767px ) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 body.full-width-content {
@@ -62,7 +77,7 @@ body .gform_wrapper .gform_footer input[type="submit"] {
     padding: 12px 25px;
     font-weight: 400;
     transition: .3s all ease;
-    letter-spacing: 6px;
+    letter-spacing: 4px;
     font-size: 15px;
 
     &:hover {
@@ -78,6 +93,19 @@ body .gform_wrapper .gform_footer input[type="submit"] {
         &:hover {
             background-color: rgba(255,255,255,0.25);
         }
+    }
+
+    &.button-small,
+    &.read-more {
+        padding: 8px 15px;
+        font-size: 13px;
+        letter-spacing: 3px;
+    }
+
+    @media( max-width: 767px ) {
+        padding: 8px 15px;
+        font-size: 13px;
+        letter-spacing: 3px;
     }
 }
 
@@ -105,8 +133,14 @@ hr {
     }
 }
 
+.entry-title {
+    font-size: 35px;
+}
+
 .site-inner {
-    // padding-top: 0;
+    @media( max-width: 767px ) {
+        padding-top: 15px;
+    }
 }
 
 .posts-navigation {

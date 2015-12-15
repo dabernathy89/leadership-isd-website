@@ -5,7 +5,8 @@
     }
 
     .entry-title {
-        font-size: 3.5rem;
+        font-size: 25px;
+        letter-spacing: 3px;
         margin-bottom: 10px;
     }
 
@@ -26,7 +27,12 @@
         padding-bottom: 50px;
         margin-bottom: 20px;
     }
+    
+    .entry:last-child .entry-footer {
+        border: none;
+    }
 }
+
 
 .post-type-archive-partners {
     .entry {
@@ -57,4 +63,24 @@
             margin-right: auto;
         }
     }
+}
+
+.widget_categories,
+.widget_archive {
+    padding: 15px 15px;
+    background-color: rgba( $lisd_darkblue, 0.1 );
+    margin-bottom: 15px;
+    border-radius: 3px;
+
+    .widget-title {
+        margin-bottom: 10px;
+    }
+}
+
+.widget.add-top-spacing {
+    margin-top: 50px;
+}
+
+.widget_recent_entries li {
+border-bottom: 1px dotted rgba( $lisd_darkblue, 0.2 );
 }
