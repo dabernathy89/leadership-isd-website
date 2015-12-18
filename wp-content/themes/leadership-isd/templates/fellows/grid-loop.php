@@ -51,7 +51,6 @@
 
         <?php endwhile; ?>
 
-        <hr>
     </div>
 
     <div class="wrap">
