@@ -13,7 +13,8 @@ jQuery(document).ready(function($){
 
         map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: 32.8205865, lng: -96.8714235},
-            zoom: 8
+            zoom: 8,
+            scrollwheel: false
         });
 
         map.data.loadGeoJson('/retrieve-impact-pins/');
