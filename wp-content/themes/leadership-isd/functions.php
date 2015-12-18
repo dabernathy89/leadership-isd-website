@@ -68,6 +68,8 @@ add_theme_support( 'genesis-after-entry-widget-area' );
 //* Add new image sizes
 add_image_size( 'featured-content-lg', 1200, 350, TRUE );
 add_image_size( 'featured-content-sm', 600, 400, TRUE );
+add_image_size( 'fellows-square', 280, 280, TRUE );
+add_image_size( 'home-featured', 300, 200, TRUE );
 
 //* Unregister layout settings
 genesis_unregister_layout( 'content-sidebar-sidebar' );
@@ -76,6 +78,11 @@ genesis_unregister_layout( 'sidebar-sidebar-content' );
 
 //* Unregister secondary sidebar
 unregister_sidebar( 'sidebar-alt' );
+
+//* Set the content width
+if ( ! isset( $content_width ) ) {
+	$content_width = 880;
+}
 
 //* Unregister the header right widget area
 unregister_sidebar( 'header-right' );
