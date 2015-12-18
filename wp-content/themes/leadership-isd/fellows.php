@@ -15,4 +15,9 @@ function lisd_fellows_archive_loop() {
 
 }
 
+function custom_excerpt_length( $length ) {
+	return 9;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
 genesis();
