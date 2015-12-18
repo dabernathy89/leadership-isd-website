@@ -21,7 +21,7 @@
                 <article class="post one-half <?php echo ($blog->current_post % 2 === 0) ? 'first' : ''; ?>">
                     <?php if (has_post_thumbnail()) : ?>
                         <a href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail('medium'); ?>
+                            <?php the_post_thumbnail( 'home-featured' ); ?>
                         </a>
                     <?php endif; ?>
 
