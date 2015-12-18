@@ -40,6 +40,18 @@ body.full-width-content {
     
 }
 
+body.page-template-default {
+    @media( min-width: 1200px ) {
+
+        background-color: rgba( $lisd_darkblue, 0.05 );
+
+        .content {
+            padding: 30px 40px;
+            background-color: white;
+        }
+    }
+}
+
 body.full-width-content.home {
 
     .content {
@@ -170,6 +182,46 @@ hr {
         &:hover {
             background-color: #cd551c;
             border: 2px solid #cd551c;
+        }
+    }
+}
+
+.sidebar {
+
+    .widget {
+        margin-bottom: 25px;
+    }
+
+    .widget.highlight {
+        padding: 15px 20px;
+        background-color: rgba(242, 101, 34, 0.12);
+        border-radius: 3px;
+        border: 2px solid rgba(242, 101, 34, 0.3);
+    }
+
+    .widget_text {
+        .widget-title {
+            margin-bottom: 10px;
+        }
+
+        .textwidget {
+            line-height: 1.6em;
+
+            p {
+                margin-bottom: 10px;
+            }
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        ul > li {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            list-style: disc;
+            line-height: 1.4em;
+            margin-bottom: 5px;
         }
     }
 }

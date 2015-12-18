@@ -1,9 +1,12 @@
 .page-template-our-team {
     .our-team-grid {
         text-align: center;
+        padding-top: 15px;
 
         .wp-post-image {
-            width: 150px;
+            width: 280px;
+            height: auto !important;
+            margin-bottom: 10px;
         }
 
         > hr {
@@ -16,10 +19,15 @@
 
         h3 {
             margin-bottom: 5px;
+            font-size: 25px;
         }
 
         .title {
             margin-bottom: 10px;
+            text-transform: uppercase;
+            opacity: 0.5;
+            font-size: 16px;
+            line-height: 1.2em;
         }
 
         p {
@@ -29,5 +37,9 @@
 
     .entry {
         margin-bottom: 0;
+    }
+
+    .entry-title {
+        text-align: center;
     }
 }

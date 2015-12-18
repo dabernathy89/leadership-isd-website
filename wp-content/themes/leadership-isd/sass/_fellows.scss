@@ -1,5 +1,7 @@
 .page-template-fellows {
     .fellows-grid {
+        margin-bottom: 35px;
+        
         .wp-post-image {
             float: left;
             margin-right: 10px;
@@ -39,4 +41,34 @@
             text-decoration: none;
         }
     }
+
+    .entry-title {
+        text-align: center;
+        margin-bottom: 0px;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        font-size: 20px;
+        color: rgba( $lisd_darkblue, 0.5 );
+        text-align: center;
+        font-weight: 400;
+        margin-bottom: 35px;
+    }
+}
+
+.type-members .entry-footer .entry-meta {
+    border-top: none;
+}
+
+.single-members .entry-title {
+    margin-bottom: 5px;
+    font-size: 30px;
+    text-align: left;
+}
+
+.single-members .member-subtitle {
+    opacity: 0.5; 
+    margin-bottom: 25px;
+    text-align: left;
 }

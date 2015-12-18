@@ -39,6 +39,98 @@ body {
 		letter-spacing: 2px;
 		opacity: 0.5;
 	}
+
+	.gform_wrapper h2.gsection_title {
+		color: rgba( $lisd_darkblue, 0.2 );
+	}
+
+	.gform_wrapper li.gfield.gfield_error,
+	.gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+		background-color: transparent;
+		border: none;
+	}
+
+	.gform_wrapper div.validation_error {
+		border: none;
+		background-color: rgba( #790000, 0.1 );
+		width: 100%;
+		margin: 20px 0 0;
+		padding: 15px 25px;
+		font-weight: 400; 
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description.validation_message {
+		border: none;
+		background-color: rgba(121, 0, 0, 0.1);
+		color: #790000;
+		width: 100%;
+		margin: 10px 0 0 !important;
+		padding: 10px 20px !important;
+		font-weight: 400;
+		display: block;
+		max-width: 100%;
+	}
+
+	.gform_wrapper li.gfield.gfield_error.gfield_contains_required {
+	    margin-top: .75em;
+	    margin-bottom: .75em!important;
+	    margin-right: 0 !important;
+	    padding-right: 0 !important;
+	    width: 100%;
+	    max-width: 100% !important;
+	}
+
+	.gform_wrapper .top_label li.gfield.gfield_error.gf_left_half, .gform_wrapper .top_label li.gfield.gfield_error.gf_right_half {
+		width: 50% !important;
+	}
+
+	.gform_wrapper .ginput_complex.ginput_container.has_first_name.has_middle_name.has_last_name span {
+		width: 31%;
+	}
+
+	#field_5_66,
+	#gield_5_70,
+	#field_5_75,
+	#field_5_81 {
+		.gfield_required {
+			display: none;
+		}
+	}
+
+	.gform_wrapper .form_saved_message {
+		background-color: rgba(242, 101, 34, 0.12);
+	    border-radius: 3px;
+	    border: 2px solid rgba(242, 101, 34, 0.3);
+	}
+}
+
+body.full-width-content,
+body.page-template-default {
+	.gform_wrapper .gsection {
+		background-color: rgba( $lisd_darkblue, 0.1 );
+		border-bottom: 0;
+		padding: 20px;
+		margin-left: -20px !important;
+		margin-right: -30px !important;
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+
+		.gsection_description {
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		@media( min-width: 767px ) {
+			margin-left: -40px !important;
+			padding-left: 40px !important;
+			padding-right: 20px !important;
+			margin-right: -56px !important;
+		}
+	}
 }
 
 select {

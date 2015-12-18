@@ -48,7 +48,7 @@
     text-align: center;
 
     .wrap {
-        padding: 40px 0;
+        padding: 60px 0;
 
         > .inner {
             max-width: 400px;
@@ -90,21 +90,32 @@
     text-align: center;
     background-position: top center;
     min-height: 0;
+   
 
     a.button {
         background-color: $lisd_orange;
     }
 
     .wrap {
-        padding: 40px 0;
+        padding: 60px 0;
     }
+
+    rect {
+        background: transparent;
+        fill: transparent;
+    }
+
+    div[dir="ltr"] {
+       margin-bottom: -50px !important;
+       margin-top: -50px !important;
+   }
 }
 
 .front-page-4 {
     text-align: center;
 
     .wrap {
-        padding: 40px 0;
+        padding: 60px 0;
     }
 
     .inner {
@@ -168,7 +179,7 @@
     border-bottom: 3px solid $lisd_orange;
 
     .wrap {
-        padding: 40px 0;
+        padding: 60px 0;
     }
 
     .inner {

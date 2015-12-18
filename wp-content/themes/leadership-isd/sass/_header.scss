@@ -28,7 +28,8 @@ section.logo {
     }
 }
 
-section.donate {
+section.donate,
+section.header-left {
     @media( min-width: 767px ) {
         padding: 60px 0 0;
     }
@@ -40,11 +41,14 @@ section.donate {
 .after-header {
     border: none;
     margin-bottom: 0;
-    padding: 40px 0 20px;
+    padding: 40px 0 40px;
     text-align: center;
+    background-color: rgba( $lisd_darkblue, 0.1 );
+
 
     .archive-title, .page-title {
         color: #222;
+        margin-bottom: 0;
     }
 }
 
