@@ -31,6 +31,9 @@ function sp_post_meta_filter($post_meta) {
 	if ( $start == $end )
 		$post_meta = $starttime . ' ' . $start;
 
+	if ( $starttime == '12:01 am' )
+		$post_meta = $start;
+
 	// $post_meta = '[post_categories before="// " after=""] [post_tags before="Tagged: "]';
 	return $post_meta;
 }
