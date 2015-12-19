@@ -14,7 +14,7 @@ function lisd_cat_page_description_meta() {
     add_action( 'genesis_after_header', 'lisd_cat_open_after_header', 5 );
 
     remove_action( 'genesis_loop', 'genesis_do_loop' );
-    add_action( 'genesis_loop', 'lisd_impact_stories_map' );
+    add_action( 'genesis_after_header', 'lisd_impact_stories_map', 30 );
     add_action( 'genesis_loop', 'lisd_impact_stories_loop' );
 }
 
