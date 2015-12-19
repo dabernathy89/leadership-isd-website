@@ -45,7 +45,7 @@
 
         <?php while ( $fellows->have_posts() ) : $fellows->the_post(); ?>
 
-            <?php $is_first = ($fellows->current_post % 2 === 0) ? "first" : ""; ?>
+            <?php $is_first = ($fellows->current_post % 3 === 0) ? "first" : ""; ?>
 
             <?php include( get_stylesheet_directory() . '/templates/fellows/grid-item.php' ); ?>
 
