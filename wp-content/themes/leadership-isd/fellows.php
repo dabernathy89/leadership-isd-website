@@ -20,4 +20,9 @@ function custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
+add_action( 'pre_get_posts', 'rb_unlimited_per_page' );
+function rb_unlimited_per_page( $query ) {
+	$query->set( 'posts_per_page', '-1' );
+}
+
 genesis();
